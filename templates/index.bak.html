@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Checker</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div id="form">
+        <form action="/" method="POST">
+            <input type="text" name="city"><br>
+            <input type="submit" value="Check">
+        </form>
+    </div>
+
+    {% if error%}
+    <div id="error">
+        <h3>{{error}}</h3>
+        <br>
+        <h2>Redirecting...</h2>
+        <script>
+            window.setTimeout(function(){
+            window.location.href = "/";
+        }, 5000);
+        </script>
+    </div>
+    {% else %}
+    <div id="weather">
+        <p id="name">{{name}}</p>
+        Temp: {{temp}}<br>
+        Feels like: {{feels_like}}<br>
+        Temp min: {{temp_min}}<br>
+        Temp max: {{temp_max}}<br>
+        Pressure: {{pressure}}<br>
+        Humidity: {{humidity}}<br><br>
+    </div>
+    <br>
+    <button onclick="document.location='/'" id="return">Home</button>
+    {% endif %}
+
+</body>
+</html>

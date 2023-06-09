@@ -1,0 +1,93 @@
+body
+{
+    font-family: 'Trebuchet MS', Arial;
+    background-image: url(../static/weather.jpg);
+    background-size: 100vw 100vh;
+}
+
+table
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -5vh;
+}
+
+.left
+{
+    text-align: left;
+}
+.right
+{
+    text-align: right;
+}
+
+.input
+{
+    border: 2px solid black;
+    color: black;
+    background-color: rgba(255, 255, 255, .05);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    width: 75%;
+    font-size: 3vmin;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+.button
+{
+    margin-top: 1vh;
+    border: 2px solid black;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    font-size: 3vmin;
+    margin-bottom: 3vh;
+}
+.button:hover
+{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#form
+{
+    text-align: center;
+    margin: auto;
+}
+
+#error
+{
+    background-color: red;
+    padding: 22px;
+    float: left;
+}
+
+#name
+{
+    text-align: center;
+    font-weight: bold;
+    font-size: 6vmin;
+    font-family: Helvetica, Arial, sans-serif
+}
+
+.weather
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    width: 75vmin;
+    height: 75vmin;
+    font-size: 4vmin;
+    background-color: rgba(255, 255, 255, .05);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 5%;
+    display: grid;
+    align-items: center;
+}
